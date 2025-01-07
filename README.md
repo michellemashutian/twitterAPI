@@ -21,12 +21,29 @@ To use this script, you need:
 Before running the script to fetch tweets, you need to: **export BEARER_TOKEN="XXXXX"** in the terminal
 or **set BEARER_TOKEN in os environment**.
 
-###
+### Option 1: Set Parameters Directly in Code
 Then you can run script:
 ```
 python main.py
 #or you can also run the main function in twitter.py
 python twitter.py
 ```
+### Option 2: Use Command-Line Arguments
+The script supports command-line arguments via argparse. You can specify parameters in command-Line.
+- `--query`: Specify the search query for fetching tweets.
+- `--res_number`: Specify the number of tweets to search (range from 10 to 100).
+- `--granularity`: Specify the time granularity for tweet count search (which can be day, hour, or minute).
 
-if you want to
+## Limitation
+Certain endpoints (like filtered stream and recent search) have a limit on how many Posts they can pull per month.
+For Free Plan, limit is 100.
+
+## Contact
+For questions or support, feel free to reach out:
+- Email: mashutian0608@hotmail.com
+
+
+
+
+
+
