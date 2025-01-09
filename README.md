@@ -34,6 +34,15 @@ The script supports command-line arguments via argparse. You can specify paramet
 - `--res_number`: Specify the number of tweets to search (range from 10 to 100).
 - `--granularity`: Specify the time granularity for tweet count search (which can be day, hour, or minute).
 
+### Twitter API Result
+#### Recent twitter counts
+```
+res: {'data': [{'end': '2025-01-01T00:00:00.000Z', 'start': '2024-12-31T00:13:40.000Z', 'tweet_count': 97875}, {'end': '2025-01-02T00:00:00.000Z', 'start': '2025-01-01T00:00:00.000Z', 'tweet_count': 223020}, {'end': '2025-01-03T00:00:00.000Z', 'start': '2025-01-02T00:00:00.000Z', 'tweet_count': 390596}, {'end': '2025-01-04T00:00:00.000Z', 'start': '2025-01-03T00:00:00.000Z', 'tweet_count': 194315}, {'end': '2025-01-05T00:00:00.000Z', 'start': '2025-01-04T00:00:00.000Z', 'tweet_count': 110810}, {'end': '2025-01-06T00:00:00.000Z', 'start': '2025-01-05T00:00:00.000Z', 'tweet_count': 74770}, {'end': '2025-01-07T00:00:00.000Z', 'start': '2025-01-06T00:00:00.000Z', 'tweet_count': 83240}, {'end': '2025-01-07T00:13:40.000Z', 'start': '2025-01-07T00:00:00.000Z', 'tweet_count': 843}], 'meta': {'total_tweet_count': 1175469}}
+```
+#### Recent tweets search
+```
+res: {'data': [{'lang': 'en', 'id': 'XXXXX', 'edit_history_tweet_ids': ['XXXX'], 'public_metrics': {'retweet_count': 5, 'reply_count': 0, 'like_count': 0, 'quote_count': 0, 'bookmark_count': 0, 'impression_count': 0}, 'text': 'AAAAAAA', 'author_id': 'AA', 'created_at': '2025-01-07T00:13:38.000Z'}, {'lang': 'en', 'id': 'XXXXXX', 'edit_history_tweet_ids': ['XXXXXX'], 'public_metrics': {'retweet_count': 4876, 'reply_count': 0, 'like_count': 0, 'quote_count': 0, 'bookmark_count': 0, 'impression_count': 0}, 'text': 'BBBBBB', 'author_id': 'BB', 'created_at': '2025-01-07T00:13:37.000Z'},.....]}
+```
 ## Limitation
 Certain endpoints (like filtered stream and recent search) have a limit on how many Posts they can pull per month.
 For Free Plan, limit is 100.
